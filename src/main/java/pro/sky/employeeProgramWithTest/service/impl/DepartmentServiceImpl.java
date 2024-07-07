@@ -28,6 +28,9 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     public List<Employee> printEmployeeOfDepartment(int department) {
+        if (department != 1 && department != 2 && department != 3 && department != 4 && department != 5) {
+            throw new RuntimeException("Неверный номер отдела!");
+        }
         return employeeService.printEmployees().values().stream()
                 .filter(employee -> employee.getDepartment() == department)
                 .collect(Collectors.toList());

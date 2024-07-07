@@ -10,8 +10,6 @@ public class Employee {
     private final String fullName;
     private final int department;
     private final int salary;
-    private final int id;
-    private static int count = 1;
 
     public Employee(String firstName, String lastName, int department, int salary) {
         this.firstName = firstName;
@@ -19,7 +17,6 @@ public class Employee {
         this.fullName = this.firstName + " " + this.lastName;
         this.department = department;
         this.salary = salary;
-        this.id = count++;
     }
 
     public String getFirstName() {
@@ -36,10 +33,6 @@ public class Employee {
 
     public int getSalary() {
         return this.salary;
-    }
-
-    public int getId() {
-        return this.id;
     }
 
     public String getFullName() {
@@ -67,7 +60,6 @@ public class Employee {
                 ", lastName='" + lastName + ' ' +
                 ", department=" + department +
                 ", salary=" + salary +
-                ", id=" + id +
                 '}';
     }
 }
